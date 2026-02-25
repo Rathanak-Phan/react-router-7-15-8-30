@@ -4,6 +4,10 @@ import Home from './page/Home'
 import About from './page/About'
 import Dashboard from './page/Dashboard'
 import Header from './components/Header'
+import NotFound from './page/NotFound'
+import User from './page/User'
+import Manage from './page/Manage'
+import Analytics from './page/Analytics'
 
 function App() {
 
@@ -14,7 +18,13 @@ function App() {
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/about' element={<About />} />
-          <Route path='/dashboard' element={<Dashboard />} />
+          <Route path='/dashboard' element={<Dashboard />} >
+            <Route path='user' element={<User />} />
+            <Route path='manage' element={<Manage />} />
+            <Route path='analytics' element={<Analytics />} />
+          </Route>
+
+          <Route path='*' element={<NotFound />} />
         </Routes>
       </Router>
     </div>
