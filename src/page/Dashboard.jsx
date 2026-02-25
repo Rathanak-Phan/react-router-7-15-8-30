@@ -1,5 +1,5 @@
 import React from 'react'
-import { Outlet } from 'react-router-dom'
+import { Outlet, Link } from 'react-router-dom'
 
 function Dashboard() {
   return (
@@ -10,15 +10,15 @@ function Dashboard() {
           <h2 className='text-2xl font-bold'>Dashboard</h2>
         </div>
 
-        <div className='bg-gray-100 border-b-2 border-gray-300 h-16 flex justify-start items-center pl-5'>
+        <Link to={"/dashboard/user"} className='bg-gray-100 border-b-2 hover:bg-gray-200 border-gray-300 h-16 flex justify-start items-center pl-5'>
           User
-        </div>
-        <div className='bg-gray-100 border-b-2 border-gray-300 h-16 flex justify-start items-center pl-5'>
+        </Link>
+        <Link to={"/dashboard/manage"} className='bg-gray-100 border-b-2 hover:bg-gray-200 border-gray-300 h-16 flex justify-start items-center pl-5'>
           Manage
-        </div>
-        <div className='bg-gray-100 border-b-2 border-gray-300 h-16 flex justify-start items-center pl-5'>
+        </Link>
+        <Link to={"/dashboard/analytics"} className='bg-gray-100 border-b-2 hover:bg-gray-200 border-gray-300 h-16 flex justify-start items-center pl-5'>
           Analytics
-        </div>
+        </Link>
       </aside>
 
       {/* content */}
