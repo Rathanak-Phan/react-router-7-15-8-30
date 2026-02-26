@@ -1,8 +1,8 @@
 import React from 'react'
-import { useOutletContext } from 'react-router-dom'
+import { Link, useOutletContext } from 'react-router-dom'
 
 function User() {
-  const users = useOutletContext();
+  const {users = []} = useOutletContext();
 
   return (
     <div className='w-full px-25'>
@@ -12,12 +12,12 @@ function User() {
         <p>Gender</p>
         <p>Action</p>
       </li>
-      { users.map((item) =>(
+      { users.map((item) => (
         <li key={item.id} className='flex justify-between bg-gray-50 border-b-2 border-gray-300 p-4'>
           <p>{item.id}</p>
           <p>{item.name}</p>
           <p>{item.gender}</p>
-          <p>Views</p>
+          <Link to={`/dashboard/user/${item.id}`}>Views</Link>
         </li>
       )) }
     </div>

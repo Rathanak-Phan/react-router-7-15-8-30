@@ -56,7 +56,7 @@ function Dashboard() {
 
       {/* content */}
       <main className='p-10 w-full'>
-        <Outlet context={ users }/>
+        <Outlet context={{ users }}/>
       </main>
     </div>
   )
