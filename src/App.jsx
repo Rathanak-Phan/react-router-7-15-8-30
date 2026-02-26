@@ -8,6 +8,7 @@ import NotFound from './page/NotFound'
 import User from './page/User'
 import Manage from './page/Manage'
 import Analytics from './page/Analytics'
+import Profile from './page/Profile'
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
           <Route path='/about' element={<About />} />
           <Route path='/dashboard' element={<Dashboard />} >
             <Route path='user' element={<User />} />
+            <Route path='user/:id' element={<Profile />} />
             <Route path='manage' element={<Manage />} />
             <Route path='analytics' element={<Analytics />} />
           </Route>

@@ -2,6 +2,39 @@ import React from 'react'
 import { Outlet, Link } from 'react-router-dom'
 
 function Dashboard() {
+  const users = [
+    {
+      id: 1,
+      name: "Sokchea",
+      gender: "male",
+      bio: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt perspiciatis error iste, suscipit ",
+      profile: "https://i.pinimg.com/1200x/84/f4/5e/84f45ebd8a292f2709e469909e154a34.jpg"
+    },
+    {
+      id: 2,
+      name: "Sanghak",
+      gender: "male",
+      bio: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt perspiciatis error iste, suscipit ",
+      profile: "https://i.pinimg.com/736x/b1/22/78/b12278f2752705a60c7ed272db124135.jpg"
+    },
+    {
+      id: 3,
+      name: "Sokchea",
+      gender: "male",
+      bio: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt perspiciatis error iste, suscipit ",
+      profile: "https://i.pinimg.com/1200x/84/f4/5e/84f45ebd8a292f2709e469909e154a34.jpg"
+    },
+    {
+      id: 4,
+      name: "Sanghak",
+      gender: "male",
+      bio: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt perspiciatis error iste, suscipit ",
+      profile: "https://i.pinimg.com/736x/b1/22/78/b12278f2752705a60c7ed272db124135.jpg"
+    },
+
+  ]
+
+
   return (
     <div className='h-screen flex'>
       {/* side bar */}
@@ -22,8 +55,8 @@ function Dashboard() {
       </aside>
 
       {/* content */}
-      <main className='p-10'>
-        <Outlet />
+      <main className='p-10 w-full'>
+        <Outlet context={ users }/>
       </main>
     </div>
   )
